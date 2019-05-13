@@ -6,13 +6,30 @@
 * Show how to look up documentation for data types in Ruby
 * Define the Single Responsibility Principle
 * Break large problems into smaller problems
-* Lives in quick feedback loops
+* Quick feedback loops
 * Demonstrate the use of common Array methods
   * `#each`
   * `#map`
   * `#select`
   * `#find`
 * Differentiate array methods by their respective return values
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ---
 
