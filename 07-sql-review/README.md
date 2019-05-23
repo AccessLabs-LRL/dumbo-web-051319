@@ -112,6 +112,12 @@ GROUP BY albums.title
 LIMIT 10;
 ```
 
+9.5  DELETE GREG (he doesn't want to be a fan anymore...)!
+
+```sql
+DELETE FROM fans WHERE fans.name = "greg";
+```
+
 10. Write the SQL to return the name of all of the artists in the 'Pop' Genre
 
 ```sql
