@@ -1,13 +1,16 @@
 class Tweet
-  attr_accessor :message, :username, :id
+  attr_accessor :message, :username, :likes, :days_old
   # @@all = []
 
-  def initialize(message, username, id=nil)
-    @message = message
-    @username = username
-    @id = id
-    # @@all << self
+  # Tweet.new({message: "hello", username: "coffee_dad"})
+  # Tweet.new("hello", "coffee_dad")
+  def initialize(arg_hash)
+    arg_hash.each do |key, value|
+      self.send("#{key}=", value)
+    end
   end
+
+  Tweet.new(username: "coffee_dad", message: "hello", likes: 8, days_old: 4)
 
   def save
     sql = <<-SQL
