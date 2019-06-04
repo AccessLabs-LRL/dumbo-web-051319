@@ -24,19 +24,24 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/students/new' do
-    # binding.pry
     erb :new
   end
 
   post '/students' do
-    # binding.pry
     @student = Student.create(params)
+    # COMMENT ABOUT ERB VS REDIRECT TO
+    # erb -> Renders the view WITHOUT making a new request-response
+    # redirect to -> Makes a new request-response, hitting the SHOW action in the controller
+
     # erb :show
     redirect to "/students/#{@student.id}"
   end
 
   get '/students/:id' do
-    # binding.pry
+    # COMMENT ABOUT .find VS .find_by
+    # find -> Throws an error if passed in an invalid ID
+    # find_by -> Returns nil if passed in an invalid ID/hash
+
     # @student = Student.find(params[:id])
     @student = Student.find_by(id: params[:id])
     @name = @student.name
