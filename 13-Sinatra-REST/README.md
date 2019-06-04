@@ -1,5 +1,8 @@
 # SWBAT
-* Explain REST
+* Explain REST (Representational State Transfer)
+   - Convention of naming files and paths
+   - Template for the path + views
+
 * Demonstrate how REST is used with CRUD
 * Build out CRUD using Sinatra
 
