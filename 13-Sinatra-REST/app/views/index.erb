@@ -1,0 +1,12 @@
+<marquee> <%= @our_friends %>  🦄</marquee>
+
+<form>
+  <input type="text" name="search_term">
+  <input type="submit" value="Search">
+</form>
+<h1>Here are all of our students:</h1>
+<ul>
+  <% @students.each do |student| %>
+    <li><%= student.name %> - Age: <%= student.age %></li>
+  <% end %>
+</ul>
