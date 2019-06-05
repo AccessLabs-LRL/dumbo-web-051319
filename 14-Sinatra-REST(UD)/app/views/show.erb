@@ -1,3 +1,9 @@
 <h1>This is the show page for <%= @name %> </h1>
 <h2>Slogan: <%= @student.slogan %> </h2>
 <h3>Age: <%= @student.age %> </h3>
+
+<form action="/students/<%= @student.id %> " method="POST">
+
+  <input type="hidden" name="_method" value="DELETE">
+  <input type="Submit" value="Obliterate Student">
+</form>

@@ -1,0 +1,26 @@
+<h1>Editing <%= @student.name %></h1>
+
+<form method="POST" action="/students/<%= @student.id %>">
+
+  <input type="hidden" name="_method" value="PATCH">
+  <br/>
+  <label for="student-name">Name</label>
+  <input type="text" name="student[name]"
+    id="student-name"
+    placeholder="<%= @student.name %>"
+    value="<%= @student.name %>"
+  />
+  <label for="student-age">Age</label>
+  <input type="number" name="student[age]"
+    id="student-age"
+    placeholder="<%= @student.age %>"
+    value="<%= @student.age %>"
+  />
+  <label for="student-slogan">Slogan</label>
+  <input type="text" name="student[slogan]"
+    id="student-slogan"
+    placeholder="<%= @student.slogan %>"
+    value="<%= @student.slogan %>"
+  />
+  <input type="submit" value="Submit!">
+</form>

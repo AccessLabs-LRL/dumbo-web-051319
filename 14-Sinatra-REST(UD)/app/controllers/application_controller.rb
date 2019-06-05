@@ -5,7 +5,41 @@ class ApplicationController < Sinatra::Base
   configure do
     set :public_folder, 'public'
     set :views, 'app/views'
+    set :method_override, true
   end
+
+  patch '/students/:id' do
+    # binding.pry
+    @student = Student.find_by(id: params[:id])
+    @student.update(params[:student])
+    # @student.update(name: params[:name], age: params[:age], slogan: params[:slogan])
+    redirect to "/students/#{@student.id}"
+  end
+
+  delete '/students/:id' do
+    @student = Student.find_by(id: params[:id])
+    @student.destroy
+    redirect to "/students"
+  end
+
+  # old_params = {
+  #   "_method"=>"PATCH",
+  #   "name"=>"Toni Lamont",
+  #   "age"=>"21",
+  #   "slogan"=>"I can drink now!!!~!!!",
+  #   "id"=>"21"
+  # }
+  #
+  #
+  # new_params = {
+  #   "_method"=>"PATCH",
+  #   "student" => {
+  #     "name"=>"Toni Lamont",
+  #     "age"=>"21",
+  #     "slogan"=>"I can drink now!!!~!!!"
+  #   },
+  #   "id"=>"21"
+  # }
 
   get "/" do
     erb :welcome
@@ -47,6 +81,14 @@ class ApplicationController < Sinatra::Base
     @name = @student.name
     erb :show
   end
+
+  get '/students/:id/edit' do
+    # binding.pry
+    @student = Student.find(params[:id])
+    erb :edit
+  end
+
+
 
 
 
