@@ -1,0 +1,21 @@
+<h1>Blessings on Blessings</h1>
+
+<form action="/blessings" method="POST">
+  <label for="b_name">Name:</label>
+  <input type="text" name="blessing[name]" id="b_name"/>
+  <label for="b_rating">Rating:</label>
+  <input type="number" name="blessing[rating]" id="b_rating"/>
+
+  <label for="b_student_id">Student ID:</label>
+  
+  <select name="blessing[student_id]" id="b_student_id">
+    <% @students.each do |student| %>
+      <option value="<%= student.id %>">
+        <%= student.name %>
+      </option>
+    <% end %>
+
+  </select>
+
+  <input type="submit" value="Bless Up!">
+</form>
