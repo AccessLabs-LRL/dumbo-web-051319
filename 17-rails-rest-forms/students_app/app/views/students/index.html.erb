@@ -1,0 +1,8 @@
+<%= link_to "Create A Student", "/students/new" %>
+<ul>
+  <% @students.each do |student| %>
+  <li>
+    name: <%= link_to student.name, student %>  - age: <%= student.age  %> (loves <%= student.favorite_food %>)
+  </li>
+  <% end %>
+</ul>
