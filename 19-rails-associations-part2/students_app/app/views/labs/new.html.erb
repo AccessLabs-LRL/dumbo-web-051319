@@ -1,0 +1,13 @@
+<h1>Make a new lab here!</h1>
+
+<%= form_for @lab do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :student_id %>
+
+  <%= f.collection_select :student_id, @students, :id, :name %>
+
+  <%= f.submit %>
+<% end %>
+
+<%= link_to "Don't see someone?", new_student_path %>

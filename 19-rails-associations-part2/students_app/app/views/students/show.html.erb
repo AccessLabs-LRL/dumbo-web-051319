@@ -1,0 +1,16 @@
+<h1><%= @student.name %>'s Page</h1>
+<p><%= @student.age %> years old...</p>
+<marquee>I LOVE <%= @student.favorite_food %>!!!!!!!!!!!!!</marquee>
+
+
+<h2><%= @student.name %>'s Labs</h2>
+
+<ul>
+  <% @student.labs.each do |lab| %>
+    <li>
+      <%= link_to lab.name, lab %>
+    </li>
+  <% end %>
+</ul>
+
+<%= button_to "Delete #{@student.name}", @student, method: :delete %>
