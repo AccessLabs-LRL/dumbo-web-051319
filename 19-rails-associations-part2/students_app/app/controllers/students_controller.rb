@@ -40,13 +40,14 @@ class StudentsController < ApplicationController
     redirect_to students_path
   end
 
-
+  # EXTRA
   def create_labs
     @student = Student.find(params[:id])
     student_lab = StudentLab.create(lab_id: params[:student_lab][:lab_id], student_id: @student.id)
     redirect_to @student
   end
-
+  # EXTRA
+  
   private
 
   def student_params

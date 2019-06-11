@@ -2,7 +2,6 @@
 <p><%= @student.age %> years old...</p>
 <marquee>I LOVE <%= @student.favorite_food %>!!!!!!!!!!!!!</marquee>
 
-
 <h2><%= @student.name %>'s Labs</h2>
 
 <ul>
@@ -13,12 +12,17 @@
   <% end %>
 </ul>
 
+<br>
+<!-- EXTRA -->
 <h3>Log some labs</h3>
 <%= form_for @student_lab, url: create_labs_path(@student) do |f| %>
   <%= f.label :lab_id %>
   <%= f.collection_select :lab_id, @labs, :id, :name %>
+  <%= f.label :done %>
+  <%= f.check_box :done %>
   <%= f.submit %>
 <% end %>
+<!-- EXTRA -->
 
 <br>
 
