@@ -1,6 +1,2 @@
-<%= form_for @student do |f| %>
-  name: <%= f.text_field :name %>
-  age: <%= f.number_field :age %>
-  favorite food: <%= f.text_field :favorite_food %>
-  <%= f.submit %>
-<% end %>
+<h1>Create a new Student!</h1>
+<%= render "form" %>
