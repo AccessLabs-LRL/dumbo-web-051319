@@ -12,7 +12,7 @@ class LabsController < ApplicationController
   def create
     # byebug
     lab = Lab.create(lab_params)
-    redirect_to lab.student
+    redirect_to lab
     # redirect_to student_path(lab.student)
     # redirect_to student_path(lab.student.id)
     # redirect_to "/students/#{lab.student_id}"
@@ -21,7 +21,7 @@ class LabsController < ApplicationController
   private
 
   def lab_params
-    params.require(:lab).permit(:name, :student_id)
+    params.require(:lab).permit(:name)
   end
 
 end

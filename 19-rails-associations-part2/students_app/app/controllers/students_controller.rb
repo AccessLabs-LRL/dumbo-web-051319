@@ -6,6 +6,8 @@ class StudentsController < ApplicationController
 
   def show
     @student = Student.find(params[:id])
+    @student_lab = StudentLab.new
+    @labs = Lab.all
   end
 
   def new
@@ -36,6 +38,13 @@ class StudentsController < ApplicationController
     student.destroy
 
     redirect_to students_path
+  end
+
+
+  def create_labs
+    @student = Student.find(params[:id])
+    student_lab = StudentLab.create(lab_id: params[:student_lab][:lab_id], student_id: @student.id)
+    redirect_to @student
   end
 
   private

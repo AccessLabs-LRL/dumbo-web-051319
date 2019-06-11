@@ -1,3 +1,10 @@
 <h1>Show Page for <%= @lab.name %>. </h1>
 
-<%= link_to "OWNED BY: #{@lab.student.name}", @lab.student %>
+<ul>
+
+  <% @lab.students.each do |student| %>
+    <li>
+      <%= link_to student.name, student_path(student) %>
+    </li>
+  <% end %>
+</ul>

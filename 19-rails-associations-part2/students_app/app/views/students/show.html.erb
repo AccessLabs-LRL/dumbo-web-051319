@@ -13,4 +13,13 @@
   <% end %>
 </ul>
 
+<h3>Log some labs</h3>
+<%= form_for @student_lab, url: create_labs_path(@student) do |f| %>
+  <%= f.label :lab_id %>
+  <%= f.collection_select :lab_id, @labs, :id, :name %>
+  <%= f.submit %>
+<% end %>
+
+<br>
+
 <%= button_to "Delete #{@student.name}", @student, method: :delete %>

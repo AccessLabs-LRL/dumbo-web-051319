@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+
+  post "/students/:id/labs", to: "students#create_labs", as: :create_labs
+
+  resources :student_labs
   resources :labs, only: [:new, :create, :show]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   # get "/hello", to:

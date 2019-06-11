@@ -10,13 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_11_152225) do
+ActiveRecord::Schema.define(version: 2019_06_11_193639) do
 
   create_table "labs", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "student_labs", force: :cascade do |t|
     t.integer "student_id"
+    t.integer "lab_id"
+    t.boolean "done"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["lab_id"], name: "index_student_labs_on_lab_id"
+    t.index ["student_id"], name: "index_student_labs_on_student_id"
   end
 
   create_table "students", force: :cascade do |t|
