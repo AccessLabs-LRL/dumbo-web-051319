@@ -1,0 +1,11 @@
+<h1>Let's create some associations!</h1>
+
+<%= form_for @student_lab do |f| %>
+  <%= f.label :student_id %>
+  <%= f.collection_select :student_id, @students, :id, :name %>
+  <%= f.label :lab_id %>
+  <%= f.collection_select :lab_id, @labs, :id, :name %>
+  <%= f.label :done %>
+  <%= f.check_box :done %>
+  <%= f.submit %>
+<% end %>

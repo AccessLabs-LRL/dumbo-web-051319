@@ -1,0 +1,10 @@
+<h1>Make a new lab here!</h1>
+
+<%= form_for @lab do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.submit %>
+<% end %>
+
+<%= link_to "Student Index", new_student_path %>
