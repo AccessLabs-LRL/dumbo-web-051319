@@ -11,8 +11,11 @@
 
   <body>
     <header>
-      <h2>Votes remaining: <%= 5 %></h2>
+      <h2>Votes remaining: <%= @votes_remaining %></h2>
     </header>
+    <p class="message">
+      <%= flash["messages"]%>
+    </p>
     <%= yield %>
   </body>
 </html>

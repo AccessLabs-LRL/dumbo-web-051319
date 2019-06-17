@@ -1,16 +1,15 @@
 class ApplicationController < ActionController::Base
+  before_action :setup_vote_stuff
 
-  before_action :setup_voting_stuff
-
-  def setup_voting_stuff
-    session["voter-count"] ||= 5
-    @votes_remaining = session["voter-count"]
+  def setup_vote_stuff
+    session["vote-count"] ||= 5
+    @votes_remaining = session["vote-count"]
     @can_vote = @votes_remaining > 0
-    @notification = flash["notification"]
+    # session["vote-count"] = session["vote-count"] || 5
   end
 
-  def use_one_vote
-    session["voter-count"] -= 1
+  def vote_once
+    session["vote-count"] -= 1
   end
 
 end
