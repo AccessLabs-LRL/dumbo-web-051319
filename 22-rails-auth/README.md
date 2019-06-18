@@ -1,15 +1,29 @@
 # Part I
 
 * AUTHENTICation
+  - Who are you?
 * AUTHORization
+  - Gives you the right to do certain tasks
 
 # Key questions for Authentication
 *  What is the difference between Authorization and Authentication?
+
 *  What is hashing and how does it make password storage more secure?
+  'password123' -> "eghdaoihjgoiadogihadigildhilbv.gjdhgiuhadoiuvh"
+  'iLoveLabs' -> "fibhfiobh./dgkhdibhidfoibjfiobidflbjilfdh"
+
 *  What are rainbow tables and how can they defeat a password hashing strategy?
+  'abc123' -> "gierhjgioadjiogjdalijij.sfhdbvkhjciobhjifojg"
+  'abc321' -> "dgkjfdhbkudnlf.hgijdfjboifjhgjhgjmgmghmghnfh"
+  'abc123' -> "gierhjgioadjiogjdalijij.sfhdbvkhjciobhjifojg"
+
 *  What is salting? What is a salt? How can it defeat a rainbow tables attack?
+  'abc123' -> 'abc123ifjbkghnk' -> "ihgjoirhbirdjilvbjrilbvjildfl.dfgidigvjndiv"
+  'abc123' -> 'abc123seasalt' -> "bjkdfnbjkcnbvdvadf.fdsajvdnvdbnlbgijeigjd"
 
 ## Let's implement
+BCrypt
+
 * Sign up
 * Log in
 
@@ -28,6 +42,3 @@
 * Log out
   * Route
   * View
-
-
-# BCrypt::Password.new(@password.salt + BCrypt::Password.new(BCrypt::Engine.hash_secret("cowabunga", @password.salt)).checksum) == "cowabunga"
