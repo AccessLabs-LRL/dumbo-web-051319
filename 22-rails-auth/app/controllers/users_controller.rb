@@ -19,22 +19,4 @@ class UsersController < ApplicationController
     params.require(:user).permit(:name, :username, :password)
   end
 
-  # def edit_params
-  #   params.require(:user).permit(:name)
-  # end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 end
