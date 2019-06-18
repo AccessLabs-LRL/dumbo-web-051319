@@ -12,8 +12,20 @@
   <body>
     <header>
 
+
+      <% if @logged_in %>
+
       <h2>Votes remaining: <%= @votes_remaining %></h2>
-      
+        <p>
+          Logged in as: <%= @current_user.username %>
+        </p>
+        <%= button_to "Log out #{@current_user.username}", "/logout", method: :delete %>
+
+      <% else %>
+        <%= link_to "Log in", new_login_path %>
+        <%= link_to "Register", new_user_path %>
+      <% end %>
+
       <% if flash[:messages] %>
         <p class="message">
           <%= flash[:messages] %>

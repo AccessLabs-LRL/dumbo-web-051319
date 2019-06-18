@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :create]
 
   resources :login, only: [:new, :create]
+  delete "/logout", to: "login#destroy"
   
+  # post "/login", to: "login#create"
   root "colors#index"
 end

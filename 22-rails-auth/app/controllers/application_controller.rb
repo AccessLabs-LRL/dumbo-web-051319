@@ -1,15 +1,25 @@
 class ApplicationController < ActionController::Base
-  before_action :setup_vote_stuff
+  before_action :find_user
+  before_action :authorized?
 
-  def setup_vote_stuff
-    session["vote-count"] ||= 5
-    @votes_remaining = session["vote-count"]
-    @can_vote = @votes_remaining > 0
-    # session["vote-count"] = session["vote-count"] || 5
+  def find_user
+    @user_id = session[:user_id]
+    @logged_in = !!@user_id
+    if @logged_in
+      @current_user = User.find(@user_id)
+      @votes_remaining = @current_user.votes_remaining
+      @can_vote = @votes_remaining > 0
+    end
   end
 
-  def vote_once
-    session["vote-count"] -= 1
+  def logout
+    session[:user_id] = nil
+  end
+
+  def authorized?
+    unless @logged_in
+      return redirect_to colors_path
+    end
   end
 
 end

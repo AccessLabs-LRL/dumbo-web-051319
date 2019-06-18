@@ -1,5 +1,5 @@
 class ColorsController < ApplicationController
-  # skip_before_action :setup_vote_stuff, only: [:index]
+  skip_before_action :authorized?, only: [:index]
 
   def index
     if request.path != colors_path
