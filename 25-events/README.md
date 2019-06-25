@@ -12,7 +12,7 @@
   * What is the difference between function definition and function invocation?
 * How can I listen for events on a DOM node / HTML element?
 * What calls the callback that I pass to addEventListener? What gets passed into that callback?
-    * What is event.preventDefault() and why is it useful?
+* What will happen if I += the innerHTML of an element with children that have event handlers?
 
 # Bonus (ok if we don't get to these)    
 * What is the DOMContentLoaded event and why is it cool?
@@ -20,6 +20,7 @@
   * https://codepen.io/telegram/pen/maJxVV
   * What does event.stopPropagation() do and why should I avoid using it?
 * What is a dataset, and how can they help me?
+  * What is event.preventDefault() and why is it useful?
 
 https://www.w3schools.com/jsref/dom_obj_event.asp
 
@@ -29,13 +30,14 @@ As a user I want...
 * to alert "HELLO!" when I click the button
 * to hear a sound when I scroll
 * anything I click on should have an emoji added to its innerText
-* to hover over any li and have it's background color change to pink
+* to hover over any li and have its background color change to pink
 
 # Actual Deliverables
-* to be able to click the button and add a taco emoji to the list
+✅ to be able to click the button and add a taco emoji to the list
 * to be able to click an emoji and change it to a coconut
-* to be able to right-click an emoji and delete it
+☑️ to be able to right-click an emoji and delete it
 * to be able to click an emoji and cycle through ["🍩", "🌮", "🥥", "🍣"]
 
-# Gotchas
-* What will happen if I += the innerHTML of an element with children that have event handlers?
+
+
+
