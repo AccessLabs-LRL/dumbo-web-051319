@@ -53,7 +53,7 @@ tacoButton.addEventListener("click", function(event){
   listOThings.prepend(taco)
 })
 
-document.querySelectorAll("*").forEach(function(element) { element.addEventListener("click", blobClicked) })
+// document.querySelectorAll("*").forEach(function(element) { element.addEventListener("click", blobClicked) })
 
 
 
