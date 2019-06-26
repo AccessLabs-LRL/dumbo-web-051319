@@ -13,17 +13,12 @@
     {
       "id": 3,
       "title": "Make to-do list",
-      "done": false
-    },
-    {
-      "id": 4,
-      "title": "Take a shower",
-      "done": false
+      "done": true
     },
     {
       "id": 5,
       "title": "Do  fetch",
-      "done": true
+      "done": false
     },
     {
       "id": 6,

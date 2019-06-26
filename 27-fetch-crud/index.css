@@ -1,9 +1,6 @@
 .container {
-  max-width: 400px;
+  max-width: 480px;
   padding: 20px;
-}
-.new-to-do {
-  width: 100%;
 }
 .delete-button {
   width: 68px;
