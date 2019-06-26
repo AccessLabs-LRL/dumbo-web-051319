@@ -24,7 +24,12 @@ function fetchToDos(element) {
 function createToDo(event, toDoListElement){
   event.preventDefault();
   const title = event.target.title.value;
+  if (!title.replace(/\s/g, "").length) {
+    event.target.classList.add("error")
+    return
+  }
   event.target.reset()
+  event.target.classList.remove("error")
   fetch("http://localhost:3000/to-do-items", {
     method: "POST",
     headers: {
@@ -43,5 +48,6 @@ function createToDo(event, toDoListElement){
 document.addEventListener("DOMContentLoaded", function(){
   const toDoListElement = document.getElementById("to-do-items");
   fetchToDos().then(data => slapToDosOnTheDOM(toDoListElement, data))
-  document.getElementById("new-to-do").addEventListener("submit", event => createToDo(event, toDoListElement))
+  const newForm = document.getElementById("new-to-do")
+  newForm.addEventListener("submit", event => createToDo(event, toDoListElement))
 })
