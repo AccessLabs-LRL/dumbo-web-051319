@@ -1,0 +1,16 @@
+.container {
+  max-width: 400px;
+  padding: 20px;
+}
+.new-to-do {
+  width: 100%;
+}
+.delete-button {
+  width: 68px;
+}
+#to-do-items {
+  margin-left: 0;
+}
+ol.ui.list li:before {
+  display: none;
+}
