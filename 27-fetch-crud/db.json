@@ -1,6 +1,11 @@
 {
   "to-do-items": [
     {
+      "id": 1,
+      "title": "Walk the cat",
+      "done": false
+    },
+    {
       "id": 2,
       "title": "Put out the trash",
       "done": false
