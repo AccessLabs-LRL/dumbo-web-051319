@@ -11,3 +11,10 @@
 ol.ui.list li:before {
   display: none;
 }
+.item {
+  transition: transform .5s;
+}
+.done {
+  text-decoration: line-through;
+  transform: rotate(20deg);
+}

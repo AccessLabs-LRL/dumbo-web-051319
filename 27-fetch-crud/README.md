@@ -23,4 +23,17 @@ Swampcast
 2. Make POST /to-do-items fetch happen
 3. Slap one single LI on the DOM!
 
+## Update
+1. When change event happens to the checkbox
+2. Make PATCH /to-do-items/:id fetch happen
+3. Slap a strikethru on the DOM!
+
+
+
+
+
+
+
+
+
 

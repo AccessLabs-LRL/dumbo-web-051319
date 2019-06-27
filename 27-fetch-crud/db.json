@@ -3,60 +3,27 @@
     {
       "id": 1,
       "title": "Walk the cat",
-      "done": false
-    },
-    {
-      "id": 2,
-      "title": "Put out the trash",
-      "done": false
+      "done": true
     },
     {
       "id": 3,
       "title": "Make to-do list",
-      "done": true
+      "done": false
     },
     {
       "id": 5,
       "title": "Do  fetch",
-      "done": false
+      "done": true
     },
     {
       "id": 6,
       "title": "Slap it on the DOM",
-      "done": false
-    },
-    {
-      "id": 7,
-      "title": "Do a fetch",
-      "done": false
-    },
-    {
-      "id": 8,
-      "title": "Remove duplicate to-do items",
-      "done": false
-    },
-    {
-      "id": 9,
-      "title": "Cry",
-      "done": false
-    },
-    {
-      "title": "Fetch lecture",
-      "id": 10
-    },
-    {
-      "title": "Feed the cat",
-      "done": false,
-      "id": 11
+      "done": true
     },
     {
       "title": "🤯",
       "done": false,
       "id": 12
-    },
-    {
-      "title": "sdfkjhkjahsjkhasdf",
-      "id": 13
     },
     {
       "title": "🍣",
@@ -77,11 +44,6 @@
       "title": "🍣",
       "done": false,
       "id": 17
-    },
-    {
-      "title": "potato",
-      "done": false,
-      "id": 18
     }
   ]
 }

@@ -5,7 +5,7 @@ function slapToDoOnTheDOM(toDoItem){
   li.id = "list-item-" + toDoItem.id
   li.className = "item"
   li.innerHTML = `
-  <input id="to-do-item-${ toDoItem.id }" type="checkbox" ${ toDoItem.done ? "checked" : "" }/>
+  <input class="js-checkbox" id="to-do-item-${ toDoItem.id }" type="checkbox" ${ toDoItem.done ? "checked" : "" }/>
   <label for="to-do-item-${ toDoItem.id }" class="js-title middle aligned content">${ toDoItem.title }</label>`
   // li.querySelector(".js-delete-button").addEventListener("click", destroyToDo)
   // li.querySelector(".js-edit-button").addEventListener("click", editToDo)
