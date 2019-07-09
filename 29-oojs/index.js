@@ -1,26 +1,43 @@
-class Person {
 
-  constructor(name = "Tess", fullName){
-    this.name = name
-    this.fullName = fullName
-  }
+document.addEventListener("DOMContentLoaded", function(){
+  new SpiceGirlApp()
 
-  introduce() {
-    return `HEY, it's ${ this.fullName }!`
-  }
+})
 
-}
 
-class Instructor extends Person {
+// class Person {
 
-  talkAboutOO(){
-    return "bablabsl"
-  }
+//   constructor(name = "Tess", fullName){
+//     this.name = name
+//     this.fullName = fullName
+//   }
 
-}
+//   introduce() {
+//     return `Hey, it's ${ this.fullName }!`
+//   }
 
-graham = new Instructor("Graham", "Graham Troyer-Joy")
-ariana = new Person("Ariana", "Ariana Grande")
+// }
+
+// class Instructor extends Person {
+
+//   constructor(name, fullName, languagesTaught){
+//     // super()
+//     super(name, "Dr. " + fullName)
+//     this.languagesTaught = languagesTaught
+//   }
+
+//   talkAboutOO(){
+//     return "bablabsl"
+//   }
+
+//   introduce(){
+//     return super.introduce() + "!!!!!!!!"
+//   }
+
+// }
+
+// graham = new Instructor("Graham", "Graham Troyer-Joy")
+// ariana = new Person("Ariana", "Ariana Grande")
 
 
 // function Instructor(fullName){

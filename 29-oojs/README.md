@@ -10,9 +10,11 @@
   * How can I make a new instance of that class?
 * How can I write an instance method for a JS class?
   * super
+* How can we do inheritance with ES6
+
+
 * How can I write a class method for a JS class?
   * Adapters!
-* How can we do inheritance with ES6
 * How can I use OOJS with DOM manipulation, Event Handling, and Server-Client Communication (fetch)
   * Why would we bother?
     * Does it give us new abilities?
