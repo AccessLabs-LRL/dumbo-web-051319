@@ -18,9 +18,9 @@
     name: graham2018.name,
     employer: graham2018.employer,
     borough: graham2018.borough,
-    shopsAtUniqloTooMuch: graham2019.shopsAtUniqloTooMuch,
-    eatsLotsOfVegetables: graham2019.eatsLotsOfVegetables,
-    sleeps8Hours: graham2019.sleeps8Hours,
+    shopsAtUniqloTooMuch: goodHabits.shopsAtUniqloTooMuch,
+    eatsLotsOfVegetables: goodHabits.eatsLotsOfVegetables,
+    sleeps8Hours: goodHabits.sleeps8Hours,
     pets: [
       "elliott"
     ],
