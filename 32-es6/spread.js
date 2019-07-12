@@ -1,6 +1,5 @@
 // What is the spread operator and why would I want to use it?
 
-  //can I do this in a more DRY way?
   const graham2018 = {
     name: "Graham",
     employer: "Access Labs",
@@ -14,6 +13,7 @@
     sleeps8Hours: true
   }
 
+  //can I do this in a more DRY way?
   const graham2019 = {
     name: graham2018.name,
     employer: graham2018.employer,
