@@ -36,6 +36,7 @@
   const boroughNames = ["Brooklyn", "Manhattan", "Bronx", "Queens", "Staten Island"];
 
   const bestBorough = boroughNames[0]
+  const boroughWithAlltheAirports = boroughNames[3]
   const birthplaceOfWuTang = boroughNames[4]
 
 
@@ -79,7 +80,7 @@
   // ]
 const greet = (spice) => { 
 
-  const { spicyName, touring } = spice;
+  const { spicyName, participatingIn2019ReunionTour: touring } = spice;
   return `Hello, ${ spicyName } Spice! ${ touring ? ":D" : "-_-" }`
 }
 
