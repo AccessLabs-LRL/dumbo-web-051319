@@ -24,7 +24,7 @@
   - ~~In [`app`](./ott/src/App.js) component, render "Hello, World!"~~
   - ~~Import dummy data from [`data.js`](./ott/src/data.js)~~
   - ~~Create a static app from the wireframe (almost finished)~~
-- ~~Identify the minimal state our application needs~~
+- Identify the minimal state our application needs
 - Identify which components should control that state
   - What are the events that we expect to happen in our app?
   - What needs to happen in response to those events? (Usually updating state)
