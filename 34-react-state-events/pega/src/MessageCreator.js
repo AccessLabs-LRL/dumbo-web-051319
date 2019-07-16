@@ -4,8 +4,9 @@ class MessageCreator extends React.Component {
   render() {
     return (
       <form>
-      Hello from the MessageCreator!!!
+        <input type="file" />
         <input type="text" />
+        <input type="submit" value="SEND THAT MESSAGE!" />
       </form>
     )
   }

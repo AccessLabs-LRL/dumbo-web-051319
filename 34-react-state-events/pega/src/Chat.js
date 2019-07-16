@@ -6,9 +6,8 @@ class Chat extends React.Component {
   render() {
     return (
       <div>
-        Hello from the Chat!!!
-        <MessageList/>
-        <MessageCreator/>
+        <MessageList channel={this.props.channel}/>
+        <MessageCreator user={this.props.user}/>
       </div>
     )
   }
