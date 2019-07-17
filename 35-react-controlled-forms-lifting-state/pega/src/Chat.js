@@ -7,7 +7,7 @@ class Chat extends React.Component {
     return (
       <div>
         <MessageList channel={this.props.channel}/>
-        <MessageCreator user={this.props.user}/>
+        <MessageCreator onNewMessage={this.props.onNewMessage} user={this.props.user}/>
       </div>
     )
   }

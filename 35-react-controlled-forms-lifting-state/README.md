@@ -4,11 +4,12 @@
 
 ## Learning Goals
 
-* Define the concept of lifting state
-* Define the concept of a controlled form or input
 * Describe the direction of data flow in React components
-* Describe inverse data flow
+* Define the concept of a controlled form or input
 * Provide a use case for controlling form inputs
+* Define the concept of lifting state
+* Describe inverse data flow
+
 
 ## Objectives
 
@@ -31,12 +32,13 @@
 
 |Component|Props|State|
 |---|---|---|
-|`App`|(no props)||
-|`Sidebar`|`current_user`, `channels_list`||
+|`App`|`data`||
+|`Sidebar`|`user`, `channels`||
 |`Profile`|`user`||
-|`ChannelsList`|`channels`||
-|`MessagesContainer`|`channelName`, `messages`||
-|`Message`|`user`, `text`||
+|`ChannelList`|`channels`||
+|`Chat`|`channel`, `user`||
+|`MessageList`|`channel`||
+|`MessageCreator`|`user`||
 
 
 ## Ongoing Questions/Notes
@@ -45,5 +47,5 @@
 ## User stories
 
 * ~~When you put in a channel name and press the + button, add that channel to the list of channels~~
-* ~~When you click on a channel, you should see the messages for that channel~~
+* When you click on a channel, you should see the messages for that channel
 * When you send a message, add that message to the messages list

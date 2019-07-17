@@ -4,36 +4,41 @@ import React from 'react';
 // new ChannelList({channels: ['#fish', '#food']})
 
 class ChannelList extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      channels: props.channels
-    }
-  }
 
-  // state = {
-  //   channels: []
-  // }
+  state = {
+    newChannel: ''
+  }
 
   handleClick = () => {
-    // this.state.channels.push('#cats-only')
-    console.log(this)
-    const updatedChannels = [...this.state.channels, '#cats-only']
-    this.setState({channels: updatedChannels})
+    this.props.onNewChannel(this.state.newChannel)
   }
 
+  handleChange = (e) => {
+    this.setState({ newChannel: e.target.value})
+  }
+
+  handleChannelClick = (e) => {
+    this.props.onChannelClick(e.target.id)
+  }
 
   render() {
-    console.log('im the ChannelList and this is my current State: ', this.state)
-    const channels = this.state.channels.map(channel => {
-      // I WANT A BUTTON <button id={channel.name}>{channel.name}</button>
-    	return <li key={channel}>{channel}</li>
+    console.log(this.props)
+    const channels = this.props.channels.map(channel => {
+    	return (
+        <li key={channel}>
+          <button onClick={this.handleChannelClick} id={channel}>{channel}</button>
+        </li>
+      )
     })
 
     return (
       <div className="navigation_channels_list">
         <h2>Channels</h2>
-        <input type="text" placeholder="New channel name" />
+        <input
+          value={this.state.newChannel}
+          onChange={this.handleChange}
+          type="text"
+          placeholder="New channel name" />
         <button onClick={this.handleClick}>+</button>
         <ul>
         {channels}

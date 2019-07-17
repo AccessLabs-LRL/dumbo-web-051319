@@ -7,7 +7,10 @@ class Sidebar extends React.Component {
     return (
       <div>
         <Profile user={this.props.user}/>
-        <ChannelList channels={this.props.channels}/>
+        <ChannelList
+          onChannelClick={this.props.onChannelClick}
+          onNewChannel={this.props.onNewChannel}
+          channels={this.props.channels}/>
       </div>
     )
   }
