@@ -3,28 +3,47 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import logo from "./logo.svg";
 import "./App.css";
+import { createStore } from 'redux'
 
-class App extends Component {
-  state = {
-    count: 0
+// console.log(createStore)
+
+const store = createStore((state={ count: 0 }, action) => {
+  switch (action.type) {
+    case 'INCREMENT_COUNT':
+      return { count: state.count + 1 }
+
+    case 'DECREMENT_COUNT':
+      return { count: state.count - 1 }
+
+    default:
+      return state
   }
+})
+
+debugger
+
+// we want redux to manage this: { count: 0 }
+class App extends Component {
+  // state = {
+  //   count: 0
+  // }
 
   increment = () => {
-    this.setState({ count: this.state.count + 1 })
+    // this.setState({ count: this.state.count + 1 })
   }
 
   decrement = () => {
-    this.setState({ count: this.state.count - 1 })
+    // this.setState({ count: this.state.count - 1 })
   }
 
   render() {
     return (
       <div className="App">
-        <Header count={this.state.count} />
+        <Header count={null} />
         <Counter
         increment={this.increment}
         decrement={this.decrement}
-        count={this.state.count} />
+        count={null} />
       </div>
     );
   }
