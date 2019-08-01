@@ -7,55 +7,42 @@ import { createStore } from 'redux'
 
 // console.log(createStore)
 
-const store = createStore((state={ count: 0 }, action) => {
+const reducer = (state={ count: 0 }, action) => {
   switch (action.type) {
     case 'INCREMENT_COUNT':
-      return { count: state.count + 1 }
+      return { count: state.count + action.number }
 
     case 'DECREMENT_COUNT':
-      return { count: state.count - 1 }
+      return { count: state.count - action.number }
 
     default:
       return state
   }
-})
+}
 
-debugger
+const store = createStore(reducer)
 
 // we want redux to manage this: { count: 0 }
 class App extends Component {
-  // state = {
-  //   count: 0
-  // }
-
-  increment = () => {
-    // this.setState({ count: this.state.count + 1 })
-  }
-
-  decrement = () => {
-    // this.setState({ count: this.state.count - 1 })
-  }
-
   render() {
     return (
       <div className="App">
-        <Header count={null} />
-        <Counter
-        increment={this.increment}
-        decrement={this.decrement}
-        count={null} />
+        <Header />
+        <Counter />
       </div>
     );
   }
 }
 
 class Header extends Component {
-
+  componentDidMount() {
+    store.subscribe(() => this.forceUpdate())
+  }
 
   renderDescription = () => {
-    const remainder = this.props.count % 5;
+    const remainder = store.getState().count % 5;
     const upToNext = 5 - remainder;
-    return `The current count is less than ${this.props.count + upToNext}`;
+    return `The current count is less than ${store.getState().count + upToNext}`;
   };
 
   render() {
@@ -70,12 +57,26 @@ class Header extends Component {
 }
 
 class Counter extends Component {
+  componentDidMount() {
+    store.subscribe(() => this.forceUpdate())
+  }
+
+  increment = () => {
+    // this.setState({ count: this.state.count + 1 })
+    store.dispatch({ type: 'INCREMENT_COUNT', number: 68 })
+  }
+
+  decrement = () => {
+    // this.setState({ count: this.state.count - 1 })
+    store.dispatch({ type: 'DECREMENT_COUNT', number: 1 })
+  }
+
   render() {
     return (
       <div className="Counter">
-        <h1>{this.props.count}</h1>
-        <button onClick={this.props.decrement}> - </button>
-        <button onClick={this.props.increment}> + </button>
+        <h1>{store.getState().count}</h1>
+        <button onClick={this.decrement}> - </button>
+        <button onClick={this.increment}> + </button>
       </div>
     );
   }

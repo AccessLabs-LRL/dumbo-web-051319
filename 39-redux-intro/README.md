@@ -9,6 +9,10 @@
 
 ## Explain Redux
 
+# problems with react?
+- passing stuff (inverse data flow)
+- async (making sure your data is there)
+- componentlifecycle (where data is so we can manage state)
 
 
 ## (Psst! Redux Terminology Cheatsheet)
