@@ -32,4 +32,11 @@ const mapDispatchToProps = {
   getProblem: getCurrentProblem
 }
 
+// const mapDispatchToProps = dispatch => {
+//   return {
+//     getProblem: (id) => dispatch({type: "", id: id})
+//   }
+// }
+
+
 export default connect(mapStateToProps, mapDispatchToProps)(ProblemShowPage)

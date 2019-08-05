@@ -10,7 +10,8 @@ class ApplicationController < ActionController::API
   end
 
   def secret
-    Rails.application.credentials.my_app_secret
+    # Rails.application.credentials.my_app_secret
+    "pickles"
   end
 
   def token

@@ -1,12 +1,12 @@
-import { combineReducers } from 'redux'
-import problems from './problemsReducer'
-import currentProblem from './currentProblemReducer'
-import currentUser from './currentUserReducer'
-import loggedIn from './loggedInReducer'
+import { combineReducers } from "redux";
+import problemsReducer from "./problemsReducer";
+import currentProblem from "./currentProblemReducer";
+import currentUser from "./currentUserReducer";
+import loggedIn from "./loggedInReducer";
 
 export default combineReducers({
-  problems,
-  currentProblem,
+  problems: problemsReducer,
+  currentProblem: currentProblem,
   currentUser,
-  loggedIn,
-})
+  loggedIn
+});
